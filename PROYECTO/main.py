@@ -6,7 +6,7 @@ import numpy as np
 crear_csv()
 
 class Muestra():
-    def __innit__(self,seq,p,q):
+    def __init__(self,seq,p,q):
         self.secuencia = seq
         self.cantidad = 0
         self.valor_q =  q
@@ -16,12 +16,12 @@ with open("secuencias.csv") as f:
     reader = csv.reader(f)
     for row in reader:
         valor_p = random.uniform(0,1)
-        print(type(valor_p))
         valor_q = -10* math.log(valor_p,10)
         muestra = Muestra(row,valor_p,valor_q)
         lista.append(muestra)
-#for i in range(len(lista)):
- #   print(lista[i].secuencia)    
+
+for i in range(len(lista)):
+    print(lista[i].valor_q) 
 
 
 #ORDENAR
