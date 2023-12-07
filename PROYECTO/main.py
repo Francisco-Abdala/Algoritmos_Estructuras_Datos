@@ -1,26 +1,19 @@
-from secuencias import *
+from secuencia import *
 import csv
-
-class Seq():
-    def __init__(self,dato,valor):
-        self.secuencia = dato
-        self.repeticion = valor
-        self.calidad = 0
-
-    def restar_calidad(self,valor):
-        self.calidad = 100.00 - valor*0.01
+import math
+import numpy as np
 
 crear_csv()
-objetos = []
-secu = []
+
+class Muestra():
+    def __innit__(self,seq):
+        self.secuencia = seq
+        self.cantidad = 0
+        self.valor_q =  0
+        self.valor_p = 0
 with open("secuencias.csv") as f:
     reader = csv.reader(f)
-    for row in reader:
-        seq = Seq(row)
-        objetos.append(seq)
-        secu.append(row)
 
-print(secu)
 
 #ORDENAR
 #BUSCAR
