@@ -122,16 +122,17 @@ def ordenamientoRapido(lista, primero, ultimo):
 
 
 def eliminar_secuencia(lista):
-    nombre = input("Inserte el nombre de la secuencia a eliminar: ").upper()            #O(1)
-    validacion = False                                                                  #O(1)
-    for i in range(len(lista)):                                                         #O(n)
-        if lista[i].nombre.upper() == nombre:                                           #O(1)
-            validacion = True                                                           #O(1)
-            lista.pop(i) 
-            break                                                                       #O(1)
-        elif i == len(lista) and validacion == False:                                   #O(1)
-            print("No se encontraron coincidencias.")                                   #O(1)
-    #Total: O(n)
+    nombre = input("Inserte el nombre de la secuencia a eliminar: ").upper()        #O(1)
+    validacion = False                                                              #O(1)
+    i = 0                                                                           #O(1)
+    while i < len(lista):                                                           #O(n)
+        if lista[i].nombre.upper() == nombre:                                       #O(1)
+            validacion = True                                                       #O(1)
+            lista.pop(i)                                                            #O(1)
+        else:                                                                       #O(1)
+            i += 1                                                                  #O(1)
+    if not validacion:                                                              #O(1)
+        print("No se encontraron coincidencias.")                                   #O(1)
 
 def modificar_valor(lista):
     nombre = input("Inserte el nombre de la secuencia a modificar: ").upper()       #O(1)
@@ -221,7 +222,7 @@ while True:
           10.- Buscar por valor de calidad en la lista no ordenada.
           11.- Buscar por valor de calidad en la lista ordenada. (Búsqueda binaria iterativa)
           12.- Mostrar secuencias útiles (calidad >= 95%).
-          13.- Salir""")
+          Para salir, ingrese una tecla cualquiera.""")
     accion = input("Ingrese el número de la acción que quiera realizar: ")
     match accion:
         case "1": listar_seq(lista)
@@ -236,4 +237,4 @@ while True:
         case "10": buscar_calidad_noOrdenada(lista)
         case "11": buscar_calidad_ordenada(lista)
         case "12": secuencias_utiles(lista)
-        case "13" : break
+        case _ : break
