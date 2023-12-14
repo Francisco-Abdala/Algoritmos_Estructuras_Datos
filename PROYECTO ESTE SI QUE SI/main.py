@@ -218,7 +218,7 @@ while True:
           5.- Buscar secuencia por nombre. (Secuencial dado que no es el elemento por el cual se ordena)
           6.- Información dado el valor de calidad. (Entrega las secuencias con un valor de calidad mayor o igual a ese valor)
           7.- Ordenar por valor de calidad. 
-          8.- Eliminar una secuencia.
+          8.- Eliminar una muestra.
           9.- Modificar información.
           10.- Buscar por valor de calidad en la lista no ordenada.
           11.- Buscar por valor de calidad en la lista ordenada. (Búsqueda binaria iterativa)
