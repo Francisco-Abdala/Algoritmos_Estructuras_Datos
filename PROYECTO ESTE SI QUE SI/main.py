@@ -128,11 +128,12 @@ def eliminar_secuencia(lista):
     while i < len(lista):                                                           #O(n)
         if lista[i].nombre.upper() == nombre:                                       #O(1)
             validacion = True                                                       #O(1)
-            lista.pop(i)                                                            #O(1)
+            lista.pop(i)                                                            #O(n)
         else:                                                                       #O(1)
             i += 1                                                                  #O(1)
     if not validacion:                                                              #O(1)
         print("No se encontraron coincidencias.")                                   #O(1)
+    #Total: O(n^2)
 
 def modificar_valor(lista):
     nombre = input("Inserte el nombre de la secuencia a modificar: ").upper()       #O(1)
