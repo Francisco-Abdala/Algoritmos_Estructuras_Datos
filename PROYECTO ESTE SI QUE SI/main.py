@@ -121,7 +121,7 @@ def ordenamientoRapido(lista, primero, ultimo):
     
 
 
-def eliminar_secuencia(lista):
+def eliminar_muestra(lista):
     nombre = input("Inserte el nombre de la secuencia a eliminar: ").upper()        #O(1)
     validacion = False                                                              #O(1)
     i = 0                                                                           #O(1)
@@ -233,7 +233,7 @@ while True:
         case "5": buscar_nombre(lista)
         case "6": buscar_calidad(lista)
         case "7": ordenamientoRapido(lista,0,len(lista) - 1)
-        case "8": eliminar_secuencia(lista)
+        case "8": eliminar_muestra(lista)
         case "9": modificar_valor(lista)
         case "10": buscar_calidad_noOrdenada(lista)
         case "11": buscar_calidad_ordenada(lista)
